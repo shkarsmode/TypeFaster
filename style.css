@@ -5,7 +5,6 @@ body{
     flex-direction: column;
     align-items: center;
     font-family: 'Lato', sans-serif;
-    /* font-weight: 600; */
     font-size: 25px;
     line-height: 30px;
     background-color: #55c5ff;
@@ -43,10 +42,7 @@ body{
 }
 
 
-img{
-    width: 150px;
-    margin-bottom: -15px;
-}
+img{width: 150px; margin-bottom: -15px;}
 
 #buttonCap{
     font-size: 13px;
@@ -74,7 +70,6 @@ img{
 }
 
 .wrapper{
-    /* word-wrap: break-word; */
     min-width: 400px;
     max-width: 800px;
     padding: 25px 20px;
@@ -91,10 +86,7 @@ img{
     box-shadow: 3px 3px 4px 2px #3f94be5d;
 }
 
-i{
-    display: inline-block;
-    font-style: normal;
-}
+i{display: inline-block; font-style: normal;}
 
 span{
     display: inline-block;
@@ -109,12 +101,7 @@ span:empty{
     align-items: center;
     position: relative;
     top: 7px;
-    /* position: relative; */
-    /* top: 8px; */
-    /* display: inline-block; */
     width: 4px;
-    /* height: 30px; */
-    /* margin: 2px 3px; */
 }
 
 .current{
@@ -130,14 +117,9 @@ span:empty{
     height: 30px;
 }
 
-.checked{
-    color: #5bc538;
-    /* font-weight: 600; */
-}
+.checked{color: #5bc538;}
 
-.notCorrect{
-    background-color: #F36747;;
-}
+.notCorrect{background-color: #F36747;}
 
 button{
     width: 160px;
@@ -166,25 +148,21 @@ button:hover{
     box-shadow: 0px 0px 2px 5px #d7dbdd8a;
 }
 
-b{
-    margin-left: 10px;
-    color: #67defd;
-}
+b{margin-left: 10px; color: #67defd;}
 
 table{
     font-size: 22px;
     padding-top: 3px;
 }
 
-table tr{
-    line-height: 18px;
-}
+table tr{line-height: 18px;}
 
 table td:first-child{
     display: block;
     font-size: 20px;
     margin-right: 5px;
 }
+
 table td:last-child{
     font-size: 25px;
     color: #67defd;
@@ -212,6 +190,4 @@ table td:last-child{
     -o-border-radius: 50%;
 }
 
-.wrapResults + div{
-    padding-right: 25px;
-}
+.wrapResults + div{padding-right: 25px;}
