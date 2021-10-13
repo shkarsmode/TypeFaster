@@ -1,10 +1,11 @@
-let $ = sel => document.querySelectorAll(sel).length > 1 ? document.querySelectorAll(sel) : document.querySelector(sel);
+const d = document;
+let $ = sel => d.querySelectorAll(sel).length > 1 ? d.querySelectorAll(sel) : d.querySelector(sel);
 
 const buttonStart = $('#start');
 const speed = $('#speed');
 const accuracy = $('#accuracy');
 const text = $('.text');
-const main =$('.mainWrap');
+const main = $('.mainWrap');
 
 let text1 = `Stimulate your mind as you test your typing speed with this standard English paragraph typing test. Watch your typing speed and accuracy increase as you learn about a variety of new topics! Over 40 typing test selections available.#`;
 let text2 = `If you don't like a test prompt, you can get a different (random) prompt with the "change test" button - or select a specific paragraph to type from the list below. To find out how fast you type, just start typing in the blank textbox on the right of the test prompt. You will see your progress, including errors on the left side as you type. In order to complete the test and save your score, you need to get 100% accuracy. You can fix errors as you go, or correct them at the end with the help of the spell checker.#`
@@ -24,10 +25,10 @@ text.innerHTML = arr[randomText];
 const checkStartButton = e => { if (e.key === 'Enter') startGame() }
 
 // Listeners 
-document.addEventListener('keydown', checkStartButton);
+d.addEventListener('keydown', checkStartButton);
 buttonStart.addEventListener('click', startGame);
 let listenerKey = () => {
-    document.addEventListener('keypress', function (e) {
+    d.addEventListener('keypress', function (e) {
         e.preventDefault();
         if (i == 0) interval = setInterval(() => checkSpeed(), 2000);
         if (String.fromCharCode(e.charCode) == textarr[randomText].split('')[i]) {
@@ -74,7 +75,7 @@ function makeText(text) {
 function startGame() {
     $('.mainWrap').style.display = 'none';
     $('.mainWrapOp').style.display = 'none';
-    document.removeEventListener('keydown', checkStartButton);
+    d.removeEventListener('keydown', checkStartButton);
 
     span = $('span');
     span[0].classList.add('current');
