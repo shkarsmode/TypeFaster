@@ -1,8 +1,10 @@
-const buttonStart = document.querySelector('#start');
-const speed = document.querySelector('#speed')
-const accuracy = document.querySelector('#accuracy')
-const text = document.querySelector('.text');
-const main = document.querySelector('.mainWrap');
+let $ = sel => document.querySelectorAll(sel).length > 1 ? document.querySelectorAll(sel) : document.querySelector(sel);
+
+const buttonStart = $('#start');
+const speed = $('#speed');
+const accuracy = $('#accuracy');
+const text = $('.text');
+const main =$('.mainWrap');
 
 let text1 = `Stimulate your mind as you test your typing speed with this standard English paragraph typing test. Watch your typing speed and accuracy increase as you learn about a variety of new topics! Over 40 typing test selections available.#`;
 let text2 = `If you don't like a test prompt, you can get a different (random) prompt with the "change test" button - or select a specific paragraph to type from the list below. To find out how fast you type, just start typing in the blank textbox on the right of the test prompt. You will see your progress, including errors on the left side as you type. In order to complete the test and save your score, you need to get 100% accuracy. You can fix errors as you go, or correct them at the end with the help of the spell checker.#`
@@ -70,11 +72,11 @@ function makeText(text) {
 
 // Start Game
 function startGame() {
-    document.querySelector('.mainWrap').style.display = 'none';
-    document.querySelector('.mainWrapOp').style.display = 'none';
+    $('.mainWrap').style.display = 'none';
+    $('.mainWrapOp').style.display = 'none';
     document.removeEventListener('keydown', checkStartButton);
 
-    span = document.querySelectorAll('span');
+    span = $('span');
     span[0].classList.add('current');
 
     buttonStart.style.display = 'none';
@@ -84,7 +86,7 @@ function startGame() {
 
 // Check speed and accuracy
 function checkSpeed() {
-    speed.innerHTML = parseInt((i * 60) / (timer == 0 ? 1 : timer));
+    speed.innerHTML = parseInt((i * 60) / (timer == 0 ? 2 : timer == 2 ? 4 : timer));
     timer += 2;
     accuracy.innerHTML = ((textarr[randomText].length - mistakes) / textarr[randomText].length * 100).toFixed(1);
 }
