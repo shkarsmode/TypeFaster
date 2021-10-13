@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    /* font-weight: 600; */
+    font-size: 25px;
+    line-height: 30px;
+    background-color: #55c5ff;
+    color: #5c5c5c;
+}
+
+.mainWrap{
+    padding: 25px 0;
+    padding-bottom: 35px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    row-gap: 25px;
+    z-index: 9999;
+    width: 700px;
+    height: 200px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    top: 140px;
+    font-size: 35px;
+    box-shadow: 3px 3px 4px 2px #296b8b5e;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    opacity: 0;
+}
+
+
+img{
+    width: 150px;
+    margin-bottom: -15px;
+}
+
+#buttonCap{
+    font-size: 13px;
+    height: 10px;
+    position: absolute;
+    bottom: 43px;
+    opacity: 0.6;
+}
+
+.layout{
+    position: absolute;
+    font-size: 16px;
+    top: 10px;
+    right: 25px;
+}
+
+.mainWrapOp{
+    margin-top: -8px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #3f94be88;
+}
+
+.wrapper{
+    /* word-wrap: break-word; */
+    min-width: 400px;
+    max-width: 800px;
+    padding: 25px 20px;
+    margin: 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    line-height: 33px;
+    height: auto;
+    white-space: wrap;
+    box-shadow: 3px 3px 4px 2px #3f94be5d;
+}
+
+i{
+    display: inline-block;
+    font-style: normal;
+}
+
+span{
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+span:empty{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 7px;
+    /* position: relative; */
+    /* top: 8px; */
+    /* display: inline-block; */
+    width: 4px;
+    /* height: 30px; */
+    /* margin: 2px 3px; */
+}
+
+.current{
+    padding: 0 2px;
+    background-color: #5bc538;
+    color: white;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin: 0 2px;
+    height: 30px;
+}
+
+.checked{
+    color: #5bc538;
+    /* font-weight: 600; */
+}
+
+.notCorrect{
+    background-color: #F36747;;
+}
+
+button{
+    width: 160px;
+    height: 40px;
+    text-shadow: 0 1px 1px #fff8c4;
+    background-color: #ffde0e;
+    background: linear-gradient(to bottom,#fbe918,#e7ca0d);
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    color: #0e509e;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: 0px 0px 2px 5px #d7dbdda9;
+}
+
+button:hover{
+    background: linear-gradient(to bottom,#f5e210,#d8be14);
+    box-shadow: 0px 0px 2px 5px #d7dbdd8a;
+}
+
+b{
+    margin-left: 10px;
+    color: #67defd;
+}
+
+table{
+    font-size: 22px;
+    padding-top: 3px;
+}
+
+table tr{
+    line-height: 18px;
+}
+
+table td:first-child{
+    display: block;
+    font-size: 20px;
+    margin-right: 5px;
+}
+table td:last-child{
+    font-size: 25px;
+    color: #67defd;
+}
+
+#accuracy:after{
+    content: '%';
+    font-size: 12px;
+}
+
+.wrapResults{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0px 10px 0px;
+    height: 60px;
+    width: 220px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px 2px #296b8b5e;
+    border-radius: 50%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.wrapResults + div{
+    padding-right: 25px;
+}
